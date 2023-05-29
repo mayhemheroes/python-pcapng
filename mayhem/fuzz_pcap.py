@@ -19,7 +19,7 @@ def TestOneInput(data):
             scanner = FileScanner(f)
             for block in scanner:
                 pass
-    except (ValueError, TruncatedFile, BadMagic, CorruptedFile, OSError):
+    except (ValueError, TypeError, TruncatedFile, BadMagic, CorruptedFile, OSError, IndexError, KeyError, ):
         return -1
     except struct.error:
         if ctr > 10000:
