@@ -1,0 +1,8 @@
+project: python-pcapng
+target: fuzz-pcap
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_pcap.py
+    libfuzzer: true
